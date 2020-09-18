@@ -1,0 +1,23 @@
+
+
+:root {
+    font-size: 60%;
+    --color-purple: #ac53f2;
+    --color-gray:  #5c5c5c;
+    --color-white: #ffffff;
+}
+
+html, body, #root {
+    height: 100vh;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+input {
+    font-family: Raleway;
+}

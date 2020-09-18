@@ -1,0 +1,25 @@
+.github-search {
+    font-family: Monaco;
+    font-size: 60px;
+    color: #000000;;
+}
+
+.github-search .text-style-1 {
+    font-family: Raleway;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.search-input {
+    width: 70rem;
+    height: 5rem;
+    background-color: var(--white);
+}
+
+button {
+    width: 10rem;
+    height: 5.7rem;
+    border-radius: 2px;
+    border: none;
+    background-color: var(--color-purple);
+}
