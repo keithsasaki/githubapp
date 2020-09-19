@@ -1,17 +1,17 @@
-#page-landing {
+#page-search-result {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
+    justify-content: space-evenly;
 }
 
-#search-text {
-    font-size: 6.2rem;
+#search-text-container {
+    font-size: 4.2rem;
+    margin: 2rem;
 }
 
 .search-input {
-    width: 70rem;
+    width: 68rem;
     height: 5rem;
     background-color: var(--white);
 }

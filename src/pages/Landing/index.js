@@ -1,16 +1,18 @@
 import React from 'react';
-import './styles.css';
 import SearchText from '../../components/SearchText';
 import SearchBarButton from '../../components/SearchBarButton';
 
+import './styles.css';
+
 function Landing() {
     return (
-        <div>
-            <SearchText />
-
+        <div id="page-landing">
+            <div id="search-text">
+                <SearchText />
+            </div>
             <SearchBarButton />     
         </div>
-    )
+    );
 }
 
 export default Landing;
