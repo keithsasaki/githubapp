@@ -8,13 +8,14 @@
     height: 30rem;
 }
 
-#icon-and-text {
-    display: flex;
-    flex-direction: column;
+#user-name {
+    font-size: 3.65rem;
+    font-weight: 300;
 }
 
-
-#icon-and-text img{
-    width: 2.5rem;
-    height: 2.5rem;
+#user-login {
+    font-size: 2.1rem;
+    color: var(--color-gray);
+    font-weight: 300;
+    padding-bottom: 2rem;
 }

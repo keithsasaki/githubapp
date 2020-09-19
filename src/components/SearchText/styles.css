@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Monaco';
+    src: local('Monaco'), url(../../assets/fonts/Monaco.ttf) format('ttf');
+}
+
 .github-search {
-    font-family: Monaco;
-    color: #000000;;
+    font-family: 'Monaco';
+    color: #000000;
 }
 
 .github-search .text-style-1 {

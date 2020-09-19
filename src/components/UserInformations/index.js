@@ -1,4 +1,5 @@
 import React from 'react';
+import IconAndText from '../IconAndText'
 
 import OrganizationIcon from '../../assets/icons/organization.svg';
 import LocationIcon from '../../assets/icons/location.svg';
@@ -13,23 +14,14 @@ function UserInformations(){
         <div id="user-informations">
             <img src="../../assets/icons/location-icon.svg" id="user-avatar" />
 
-            <p id="user-name">Darth Vader</p>
-            <p id="user-login">anakinskywalker</p>
+            <span id="user-name">Darth Vader</span>
+            <span id="user-login">anakinskywalker</span>
             <div id="icon-and-text">
-                <img src={OrganizationIcon} />
-                <span>The Galactic Empire</span>
-
-                <img src={LocationIcon} />
-                <span>Tatooine</span>
-
-                <img src={StarIcon} />
-                <span>1.000.000</span>
-
-                <img src={RepositoriesIcon} />
-                <span>4</span>
-
-                <img src={FollowersIcon} />
-                <span>9.999.999</span>
+                <IconAndText icon={OrganizationIcon} alt="Organization Icon" text="The galactic Empire"/>
+                <IconAndText icon={LocationIcon} alt="Location Icon" text="Tatooine"/>
+                <IconAndText icon={StarIcon} alt="Star Icon" text="1.000.000"/>
+                <IconAndText icon={RepositoriesIcon} alt="Repositories Icon" text="4"/>
+                <IconAndText icon={FollowersIcon} alt="Followers Icon" text="9.999.999"/>
             </div>    
 
         </div>   

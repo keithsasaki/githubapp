@@ -7,9 +7,10 @@
 
 html, body, #root {
     height: 100vh;
+    margin: 2rem;
 }
 
 body,
 input {
     font-family: Raleway;
-}
+} 
