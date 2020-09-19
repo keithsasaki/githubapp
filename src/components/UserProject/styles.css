@@ -1,0 +1,25 @@
+#project-name{
+    color: var(--color-purple);
+    font-size: 3.6rem;
+    font-weight: normal;
+}
+
+#project-description {
+    font-size: 2.1rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}   
+
+#user-project {
+    display: flex;
+    flex-direction: column;
+}
+
+#result {
+    display: flex;
+    flex-direction: row
+}
+
+#user-informations{
+    margin-right: 7rem;
+}

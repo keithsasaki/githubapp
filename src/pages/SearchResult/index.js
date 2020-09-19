@@ -4,6 +4,7 @@ import SearchText from '../../components/SearchText';
 
 import './styles.css';
 import UserInformations from '../../components/UserInformations';
+import UserProject from '../../components/UserProject';
 
 function SearchResult() {
     return (
@@ -16,9 +17,15 @@ function SearchResult() {
                     <SearchBarButton />
                 </div>
             </div>
-
-            <div id="user-informations">
-                <UserInformations />
+            <div id="result">
+                <div id="user-informations">
+                    <UserInformations />
+                </div>
+                <div id="user-projects">
+                    <UserProject projectName="Death Star" projectDescription="The most powerful weapon in the universe" />
+                    <UserProject projectName="Death Star" projectDescription="The most powerful weapon in the universe" />
+                    <UserProject projectName="Death Star" projectDescription="The most powerful weapon in the universe" />
+                </div>
             </div>
         </React.Fragment>
     );
