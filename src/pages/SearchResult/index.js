@@ -3,17 +3,24 @@ import SearchBarButton from '../../components/SearchBarButton';
 import SearchText from '../../components/SearchText';
 
 import './styles.css';
+import UserInformations from '../../components/UserInformations';
 
 function SearchResult() {
     return (
-        <div id="page-search-result">
-            <div id="search-text-container">
-                <SearchText />
+        <React.Fragment>
+            <div id="page-search-result">
+                <div id="search-text-container">
+                    <SearchText />
+                </div>
+                <div id="search-bar-button-container">
+                    <SearchBarButton />
+                </div>
             </div>
-            <div id="search-bar-button-container">
-                <SearchBarButton />
+
+            <div id="user-informations">
+                <UserInformations />
             </div>
-        </div>
+        </React.Fragment>
     );
 }
 
