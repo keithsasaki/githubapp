@@ -9,7 +9,7 @@ function UserProject(props) {
         <div id="user-project">
             <span id="project-name">{props.projectName}</span>
             <span id="project-description">{props.projectDescription}</span>
-            <IconAndText icon={StarIcon} text="4000" />
+            <IconAndText icon={StarIcon} text={props.stargazers_count} />
         </div>
     );
 }

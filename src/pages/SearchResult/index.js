@@ -70,8 +70,16 @@ function SearchResult() {
                 <UserData />
 
                 {repositories.length > 0 && <div id="user-projects">
-                    { repositories.map((repo) => {
-                        return <UserProject projectName={repo.name} projectDescription={repo.description} />
+                    { repositories.sort((a,b) => {
+                        if(a.stargazers_count > b.stargazers_count) return -1
+                        else if(a.stargazers_count < b.stargazers_count) return 1
+                        return 0
+                    }).map((repo) => {
+                        return <UserProject 
+                                projectName={repo.name} 
+                                projectDescription={repo.description} 
+                                key={repo.name}
+                                stargazers_count={repo.stargazers_count}/>
                     })}
                 </div>
                 }

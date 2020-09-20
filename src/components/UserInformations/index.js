@@ -21,7 +21,7 @@ function UserInformations(props){
                 <IconAndText icon={LocationIcon} alt="Location Icon" text={props.user.location}/>
                 <IconAndText icon={StarIcon} alt="Star Icon" text={props.user.stars}/>
                 <IconAndText icon={RepositoriesIcon} alt="Repositories Icon" text={props.user.public_repos}/>
-                <IconAndText icon={FollowersIcon} alt="Followers Icon" text={props.user.repos}/>
+                <IconAndText icon={FollowersIcon} alt="Followers Icon" text={props.user.followers}/>
             </div>    
 
         </div>   
