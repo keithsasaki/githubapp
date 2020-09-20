@@ -2,36 +2,58 @@ import React, {useState, useEffect} from 'react';
 import SearchBarButton from '../../components/SearchBarButton';
 import SearchText from '../../components/SearchText';
 import {useParams} from 'react-router-dom';
-
-import './styles.css';
 import UserInformations from '../../components/UserInformations';
 import UserProject from '../../components/UserProject';
 import api from '../../services/api';
+import UserNotFound from '../../components/UserNotFound';
 
+import './styles.css';
 function SearchResult() {
     const { userName } = useParams();
 
     const [user, setUser] = useState({});
     const [repositories, setRepositories] = useState([]);
+    const [userNotFound, setUserNotFound] = useState(false);
    
     useEffect(() => {
+        const onButtonClickHandler = (userName) => {
+            getUserInformations(userName);
+            getReposInformations(userName);
+        }
+
         onButtonClickHandler(userName);
     }, [userName]);
 
 
-    const onButtonClickHandler = (userName) => {
-        getUserInformations(userName);
-        getReposInformations(userName);
-    }
-
     async function getUserInformations(userName){
-        const response = await api.get(`users/${userName}`);
-        setUser(response.data);
+        try{
+            const response = await api.get(`users/${userName}`);
+            setUser(response.data);
+            setUserNotFound(false);
+        } catch(error){
+            if(error.response.status === 404){
+                console.log("User not found");
+            }else{
+                console.log("Error trying to search user")
+            }
+            setUserNotFound(true);
+            setRepositories([]);
+            setUser({});
+        }
     }
 
     async function getReposInformations(userName){
         const response = await api.get(`users/${userName}/repos`);
         setRepositories(response.data);
+    }
+
+    function UserData(){
+        if(!userNotFound){
+            return <UserInformations user= {user}/>
+        }
+        else{
+            return <UserNotFound />
+        }
     }
 
     return (
@@ -45,14 +67,14 @@ function SearchResult() {
                 </div>
             </div>
             <div id="result">
-                <div id="user-informations">
-                    <UserInformations user= {user}/>
-                </div>
-                <div id="user-projects">
+                <UserData />
+
+                {repositories.length > 0 && <div id="user-projects">
                     { repositories.map((repo) => {
                         return <UserProject projectName={repo.name} projectDescription={repo.description} />
-                    })};
+                    })}
                 </div>
+                }
             </div>
         </React.Fragment>
     );

@@ -10,7 +10,6 @@ function Routes() {
         <BrowserRouter>
             <Route path="/" exact component={Landing} />
             <Route path="/result/:userName" component={SearchResult} />
-            {/* <Route path="/" component={Landing} />  */}
         </BrowserRouter>
     );
 }
