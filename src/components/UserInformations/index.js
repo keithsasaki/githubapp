@@ -12,7 +12,7 @@ import './styles.css';
 function UserInformations(){
     return(
         <div id="user-informations">
-            <img src="../../assets/icons/location-icon.svg" id="user-avatar" />
+            <img src="../../assets/icons/location-icon.svg" id="user-avatar" alt="user avatar"/>
 
             <span id="user-name">Darth Vader</span>
             <span id="user-login">anakinskywalker</span>

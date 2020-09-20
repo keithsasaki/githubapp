@@ -9,7 +9,7 @@ function Routes() {
     return (
         <BrowserRouter>
             <Route path="/" exact component={Landing} />
-            <Route path="/result" component={SearchResult} />
+            <Route path="/result/:userName" component={SearchResult} />
             {/* <Route path="/" component={Landing} />  */}
         </BrowserRouter>
     );

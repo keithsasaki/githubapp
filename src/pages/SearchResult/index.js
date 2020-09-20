@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {useParams} from "react-router-dom";
 import SearchBarButton from '../../components/SearchBarButton';
 import SearchText from '../../components/SearchText';
 
@@ -6,7 +7,9 @@ import './styles.css';
 import UserInformations from '../../components/UserInformations';
 import UserProject from '../../components/UserProject';
 
-function SearchResult() {
+function SearchResult(props) {
+    let { userName } = useParams();
+
     return (
         <React.Fragment>
             <div id="page-search-result">
