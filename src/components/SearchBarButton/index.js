@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import searchIcon from "../../assets/icons/search.svg";
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import './styles.css';
 
@@ -17,7 +17,6 @@ function SearchBarButton(props) {
 
         if(userName !== ""){
             props.history.push(`/result/${userName}`);
-            props.onButtonClick();
         }
     }
 
