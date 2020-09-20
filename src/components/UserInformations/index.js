@@ -9,7 +9,7 @@ import FollowersIcon from '../../assets/icons/followers.svg';
 
 import './styles.css';
 
-function UserInformations(){
+function UserInformations(props){
     return(
         <div id="user-informations">
             <img src="../../assets/icons/location-icon.svg" id="user-avatar" alt="user avatar"/>
