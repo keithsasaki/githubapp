@@ -1,16 +1,30 @@
 import React, {useState} from 'react';
-import {useParams} from "react-router-dom";
 import SearchBarButton from '../../components/SearchBarButton';
 import SearchText from '../../components/SearchText';
 
 import './styles.css';
 import UserInformations from '../../components/UserInformations';
 import UserProject from '../../components/UserProject';
-import Axios from 'axios';
+import api from '../../services/api';
 
-function SearchResult(props) {
-    let { userName } = useParams();
+function SearchResult() {
     const [user, setUser] = useState({});
+    const [repositories, setRepositories] = useState([]);
+
+    const handleClick = (newUser) => {
+        getUserInformations(newUser);
+        getReposInformations(newUser);
+    }
+
+    async function getUserInformations(userName){
+        const response = await api.get(`users/${userName}`);
+        setUser(response.data);
+    }
+
+    async function getReposInformations(userName){
+        const response = await api.get(`users/${userName}/repos`);
+        setRepositories(response.data);
+    }
 
     return (
         <React.Fragment>
@@ -19,7 +33,7 @@ function SearchResult(props) {
                     <SearchText />
                 </div>
                 <div id="search-bar-button-container">
-                    <SearchBarButton userName={userName} newSearch={handleClick}/>
+                    <SearchBarButton onButtonClick = {handleClick.bind(this)}/>
                 </div>
             </div>
             <div id="result">
@@ -27,26 +41,15 @@ function SearchResult(props) {
                     <UserInformations user= {user}/>
                 </div>
                 <div id="user-projects">
-                    <UserProject projectName="Death Star" projectDescription="The most powerful weapon in the universe" />
-                    <UserProject projectName="Death Star" projectDescription="The most powerful weapon in the universe" />
-                    <UserProject projectName="Death Star" projectDescription="The most powerful weapon in the universe" />
+                    { repositories.map((repo) => {
+                                return <UserProject projectName={repo.name} projectDescription={repo.description} />
+                    })};
                 </div>
             </div>
         </React.Fragment>
     );
+    
 
-    function getUserInformations(newUserName){
-        alert('entrou');
-        Axios.get(`https://api.github.com/users/${newUserName}`)
-            .then(res => {
-                setUser(res)
-            });
-    }
-
-    function handleClick(newUserName){
-        console.log(newUserName);
-        getUserInformations(newUserName);
-    }
 }
 
 export default SearchResult;
