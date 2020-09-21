@@ -20,6 +20,16 @@
     flex-direction: row
 }
 
-#user-informations{
-    margin-right: 7rem;
+@media (max-width: 700px){
+    #project-name{
+        color: var(--color-purple);
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
+    
+    #project-description {
+        font-size: 1.2rem;
+        font-weight: 300;
+        padding-bottom: 1rem;
+    }   
 }

@@ -14,3 +14,9 @@ body,
 input {
     font-family: Raleway;
 } 
+
+@media (max-width: 700px){
+    html, body, #root {
+        margin: 1rem;
+    }
+}

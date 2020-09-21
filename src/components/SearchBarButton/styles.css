@@ -17,3 +17,11 @@ button {
     border: none;
     background-color: var(--color-purple);
 }
+
+@media (max-width: 700px){
+    .search-input {
+        width: 25rem;
+        height: 4.6rem;
+        background-color: var(--white);
+    }
+}
