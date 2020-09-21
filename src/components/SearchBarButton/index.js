@@ -18,11 +18,23 @@ function SearchBarButton(props) {
         if(userName !== ""){
             props.history.push(`/result/${userName}`);
         }
+    };
+
+    const onEnterKeyPress = event =>{
+        event.preventDefault();
+
+        if(userName !== "" && event.key === 'Enter'){
+            props.history.push(`/result/${userName}`);
+        }
     }
 
     return(
         <div id="container">
-            <input type="text" className="search-input" onChange={onChangeHandler} value={userName}></input>
+            <input type="text" className="search-input" 
+                onChange={onChangeHandler} 
+                onKeyUp={onEnterKeyPress} 
+                value={userName}>
+            </input>
             <button type="submit" onClick={onSubmitHandler}>
                 <img src={searchIcon} alt="buscar"></img>
             </button>
