@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing IconAndText Component matches snapshot 1`] = `
+<div
+  className="icon-and-text"
+>
+  <img />
+  <span>
+     
+     
+  </span>
+</div>
+`;

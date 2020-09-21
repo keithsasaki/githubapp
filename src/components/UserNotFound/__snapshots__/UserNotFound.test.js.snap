@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing UserNotFound Component matches snapshot 1`] = `
+<div
+  id="user-not-found"
+>
+  <span>
+    User not found :(
+  </span>
+</div>
+`;

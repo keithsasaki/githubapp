@@ -12,8 +12,7 @@ import './styles.css';
 function UserInformations(props){
     return(
         <div id="user-informations">
-            <img src={props.user.avatar_url} id="user-avatar" alt="user avatar"/>
-
+            <img src={props.user.avatar_url}  id="user-avatar" alt="user avatar"/>
             <span id="user-name">{props.user.name}</span>
             <span id="user-login">{props.user.login}</span>
             <div id="icon-and-text">
@@ -23,7 +22,6 @@ function UserInformations(props){
                 <IconAndText icon={RepositoriesIcon} alt="Repositories Icon" text={props.user.public_repos}/>
                 <IconAndText icon={FollowersIcon} alt="Followers Icon" text={props.user.followers}/>
             </div>    
-
         </div>   
 
     );
