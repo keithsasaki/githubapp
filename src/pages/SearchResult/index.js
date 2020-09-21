@@ -14,6 +14,7 @@ function SearchResult() {
     const [user, setUser] = useState({});
     const [repositories, setRepositories] = useState([]);
     const [userNotFound, setUserNotFound] = useState(false);
+    const [starsSum, setStarsSum] = useState(0);
    
     useEffect(() => {
         const onButtonClickHandler = (userName) => {
@@ -49,7 +50,10 @@ function SearchResult() {
 
     function UserData(){
         if(!userNotFound){
-            return <UserInformations user= {user}/>
+            if(repositories.length > 0){
+                setStarsSum(repositories.reduce((first, next) => first + parseInt(next.stargazers_count),0))
+            }
+            return <UserInformations user= {user} starsSum={starsSum}/>
         }
         else{
             return <UserNotFound />
