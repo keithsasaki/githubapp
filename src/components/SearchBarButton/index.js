@@ -22,7 +22,6 @@ function SearchBarButton(props) {
 
     const onEnterKeyPress = event =>{
         event.preventDefault();
-
         if(userName !== "" && event.key === 'Enter'){
             props.history.push(`/result/${userName}`);
         }
