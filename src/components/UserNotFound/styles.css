@@ -3,3 +3,9 @@
     font-size: 4.2rem;
     color: var(--color-purple);
 }
+
+@media (max-width: 700px){
+    #user-not-found {
+        font-size: 3rem;
+    }
+}
