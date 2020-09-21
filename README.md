@@ -4,3 +4,7 @@ Para executá-lo no modo de desenvolvimento você pode rodar o script 'yarn star
 
 Para realizar testes unitários você pode rodar o script 'yarn test'.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 801a18a7f225572d17e853d214c3d212c71e7180
