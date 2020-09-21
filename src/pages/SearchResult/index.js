@@ -48,7 +48,7 @@ function SearchResult() {
         setRepositories(response.data);
     }
 
-    function UserData(){
+    const UserData = () =>{
         if(!userNotFound){
             if(repositories.length > 0){
                 setStarsSum(repositories.reduce((first, next) => first + parseInt(next.stargazers_count),0))
@@ -79,11 +79,7 @@ function SearchResult() {
                         else if(a.stargazers_count < b.stargazers_count) return 1
                         return 0
                     }).map((repo) => {
-                        return <UserProject 
-                                projectName={repo.name} 
-                                projectDescription={repo.description} 
-                                key={repo.name}
-                                stargazers_count={repo.stargazers_count}/>
+                        return <UserProject repo={repo} key={repo.name}/>
                     })}
                 </div>
                 }

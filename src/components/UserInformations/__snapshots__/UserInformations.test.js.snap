@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing UserInformation Component matches snapshot 1`] = `
+<div
+  id="user-informations"
+>
+  <img
+    alt="user avatar"
+    id="user-avatar"
+    src="https://avatars2.githubusercontent.com/u/24439327?s=460&u=7b1ce31ae270195192c94f37116ffa46fcca572d&v=4"
+  />
+  <span
+    id="user-name"
+  >
+    Keith
+  </span>
+  <span
+    id="user-login"
+  >
+    keithsasaki
+  </span>
+  <div
+    id="icon-and-text"
+  >
+    <div
+      className="icon-and-text"
+    >
+      <img
+        alt="Organization Icon"
+        src="organization.svg"
+      />
+      <span>
+         
+        Concrete
+         
+      </span>
+    </div>
+    <div
+      className="icon-and-text"
+    >
+      <img
+        alt="Location Icon"
+        src="location.svg"
+      />
+      <span>
+         
+        São Carlos
+         
+      </span>
+    </div>
+    <div
+      className="icon-and-text"
+    >
+      <img
+        alt="Star Icon"
+        src="star.svg"
+      />
+      <span>
+         
+        50
+         
+      </span>
+    </div>
+    <div
+      className="icon-and-text"
+    >
+      <img
+        alt="Repositories Icon"
+        src="repositories.svg"
+      />
+      <span>
+         
+        200
+         
+      </span>
+    </div>
+    <div
+      className="icon-and-text"
+    >
+      <img
+        alt="Followers Icon"
+        src="followers.svg"
+      />
+      <span>
+         
+        1000
+         
+      </span>
+    </div>
+  </div>
+</div>
+`;
